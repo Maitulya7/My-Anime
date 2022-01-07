@@ -95,3 +95,19 @@ button:focus {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+@media (max-width:500px){
+  .left-slide { 
+     height:10px;
+     width: 0px; 
+ }
+ .right-slide{
+  left: 0%;
+  width: 100%;
+ }
+ .slider-container .action-buttons button{
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  z-index: 100;
+ }
+}
