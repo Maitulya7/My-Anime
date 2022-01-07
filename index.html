@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vertical Slider</title>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="left-slide">
+        <div style="background-color: #76d0e7">
+          <h1>Koe No Katachi</h1>
+          <p>Shouko And Nishimiya </p>
+        </div>
+        <div style="background-color: #e4cdaf">
+          <h1>Your Name</h1>
+          <p>Taki and Mitsuha </p>
+        </div>
+        <div style="background-color: #62625c">
+          <h1>Death Note</h1>
+          <p>L And Kira </p>
+        </div>
+        <div style="background-color: #254428">
+          <h1>Attack On Titan</h1>
+          <p>Levi Ackerman And Eren Yeager </p>
+        </div>
+        <div style="background-color: #4e4a4d">
+          <h1>Mob Psycho 100</h1>
+          <p>Shigeo Kageyama </p>
+        </div>
+        <div style="background-color: #eca4da">
+          <h1>Jujutsu Kaisen</h1>
+          <p>Sukuna </p>
+        </div>
+        <div style="background-color: #e4880f">
+          <h1>Saitama</h1>
+          <p>The Strongest</p>
+        </div>
+        <div style="background-color: #ccac82">
+          <h1>Violet Evergarden</h1>
+          <p>Ghostwriter</p>
+        </div>
+        <div style="background-color: #c585c2">
+          <h1>Hōtarō Oreki</h1>
+          <p>I am not Lazy ,i'm just conserving energy</p>
+        </div>
+        <div style="background-color: #201f1f">
+          <h1>Tobio Kageyama</h1>
+          <p>The King Of Court</p>
+        </div>
+        <div style="background-color: #201f1f">
+          <h1>Tokyo Manjiro Gang</h1>
+          <p>Mikey Manjiro Sano Ken Ryuguji</p>
+        </div>
+        <div style="background-color: #0a0a0a">
+          <h1>Hinokami Kagura</h1>
+          <p>Dance of the Fire God</p>
+        </div>
+        <div style="background-color: #f39e3d">
+          <h1>Portgas D. Ace</h1>
+          <p>The Fire Fist Ace</p>
+        </div>
+        <div style="background-color: #FD3555">
+          <h1>Izuku Midoriya</h1>
+          <p>The number one Hero</p>
+        </div>
+        <div style="background-color: #ecb10e">
+          <h1>The best Friends</h1>
+          <p>Hokage and Shadow Hokage</p>
+        </div>
+        <div style="background-color: #252E33">
+          <h1>Uzumaki Boruto</h1>
+          <p>The last shinobi</p>
+        </div>
+        <div style="background-color: #24e7ee">
+          <h1>Son-Goku</h1>
+          <p>Super saiyan blue</p>
+        </div>
+      </div>
+      <div class="right-slide">
+        <div style="background-image: url('https://images6.alphacoders.com/803/thumb-1920-803643.png')"></div>
+        <div style="background-image: url('https://images7.alphacoders.com/871/thumb-1920-871169.png')"></div>
+        <div style="background-image: url('https://images4.alphacoders.com/727/thumb-1920-72706.jpg')"></div>
+        <div style="background-image: url('https://images6.alphacoders.com/820/thumb-1920-820024.png')"></div>
+        <div style="background-image: url('https://images2.alphacoders.com/649/thumb-1920-649995.jpg')"></div>
+        <div style="background-image: url('https://images.alphacoders.com/104/thumb-1920-1049984.jpg')"></div>
+        <div style="background-image: url('https://images7.alphacoders.com/115/thumb-1920-1155001.jpg')"></div>
+        <div style="background-image: url('https://images4.alphacoders.com/692/thumb-1920-692505.jpg')"></div>
+        <div style="background-image: url('https://images5.alphacoders.com/877/thumb-1920-877123.png')"></div>
+        <div style="background-image: url('https://images.alphacoders.com/901/thumb-1920-901101.png')"></div>
+        <div style="background-image: url('https://images3.alphacoders.com/654/thumb-1920-654247.jpg')"></div>
+        <div style="background-image: url('https://images3.alphacoders.com/114/thumb-1920-1141921.png')"></div>
+        <div style="background-image: url('https://images.alphacoders.com/998/thumb-1920-998446.jpg')"></div>
+        <div style="background-image: url('https://images3.alphacoders.com/632/thumb-1920-632839.jpg')"></div>
+        <div style="background-image: url('https://images.alphacoders.com/153/thumb-1920-153243.jpg')"></div>
+        <div style="background-image: url('https://images6.alphacoders.com/725/thumb-1920-725814.png')"></div>
+        <div style="background-image: url('https://images7.alphacoders.com/739/thumb-1920-739668.png')"></div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
